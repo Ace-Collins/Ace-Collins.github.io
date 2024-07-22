@@ -1,4 +1,3 @@
-# 下面是我的友链
 1. [Ace Collins](https://acecollins.my.canvasite.cn/aab) 
     因理想而出生，为责任而成长。
 2. [Meekdai](https://blog.meekdai.com/) 
