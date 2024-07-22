@@ -20,7 +20,7 @@
 >结尾有一个精简版，可以看一看
 
 代码如下：
-```
+```python
 import tkinter as tk
 from tkinter import filedialog, messagebox, simpledialog, colorchooser
 class Notepad:
@@ -133,7 +133,7 @@ if __name__ == '__main__':
 >同样用Python的IDLE新建
 
 代码如下：
-```
+```python
 import tkinter as tk
 from tkinter import filedialog
 def save_file():
@@ -155,6 +155,9 @@ root.mainloop()
 
 >大小释义
 >1KB=1024字节，510字节≈0.5KB！
+
+>2024.7.22更新
+>增加彩色代码高亮显示
 
 OVER。">
 <meta property="og:title" content="用Python写一个记事本">
@@ -168,7 +171,7 @@ OVER。">
 >结尾有一个精简版，可以看一看
 
 代码如下：
-```
+```python
 import tkinter as tk
 from tkinter import filedialog, messagebox, simpledialog, colorchooser
 class Notepad:
@@ -281,7 +284,7 @@ if __name__ == '__main__':
 >同样用Python的IDLE新建
 
 代码如下：
-```
+```python
 import tkinter as tk
 from tkinter import filedialog
 def save_file():
@@ -304,12 +307,15 @@ root.mainloop()
 >大小释义
 >1KB=1024字节，510字节≈0.5KB！
 
+>2024.7.22更新
+>增加彩色代码高亮显示
+
 OVER。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ace-collins.github.io//post/yong-Python-xie-yi-ge-ji-shi-ben.html">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/Meekdai/meekdai.github.io/logo64.jpg">
 <title>用Python写一个记事本</title>
-
+<link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet" />
 
 
 </head>
@@ -371,139 +377,141 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <div class="markdown-alert markdown-alert-tip"><p class="markdown-alert-title"><svg class="octicon octicon-light-bulb mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z"></path></svg>Tip</p><p>结尾有一个精简版，可以看一看</p>
 </div>
 <p>代码如下：</p>
-<pre class="notranslate"><code class="notranslate">import tkinter as tk
-from tkinter import filedialog, messagebox, simpledialog, colorchooser
-class Notepad:
-    def __init__(self, root):
-        self.root = root
-        self.root.title("记事本")
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">tkinter</span> <span class="pl-k">as</span> <span class="pl-s1">tk</span>
+<span class="pl-k">from</span> <span class="pl-s1">tkinter</span> <span class="pl-k">import</span> <span class="pl-s1">filedialog</span>, <span class="pl-s1">messagebox</span>, <span class="pl-s1">simpledialog</span>, <span class="pl-s1">colorchooser</span>
+<span class="pl-k">class</span> <span class="pl-v">Notepad</span>:
+    <span class="pl-k">def</span> <span class="pl-en">__init__</span>(<span class="pl-s1">self</span>, <span class="pl-s1">root</span>):
+        <span class="pl-s1">self</span>.<span class="pl-s1">root</span> <span class="pl-c1">=</span> <span class="pl-s1">root</span>
+        <span class="pl-s1">self</span>.<span class="pl-s1">root</span>.<span class="pl-en">title</span>(<span class="pl-s">"记事本"</span>)
         
-        self.text = tk.Text(self.root, undo=True)
-        self.text.pack(expand=True, fill='both')
+        <span class="pl-s1">self</span>.<span class="pl-s1">text</span> <span class="pl-c1">=</span> <span class="pl-s1">tk</span>.<span class="pl-v">Text</span>(<span class="pl-s1">self</span>.<span class="pl-s1">root</span>, <span class="pl-s1">undo</span><span class="pl-c1">=</span><span class="pl-c1">True</span>)
+        <span class="pl-s1">self</span>.<span class="pl-s1">text</span>.<span class="pl-en">pack</span>(<span class="pl-s1">expand</span><span class="pl-c1">=</span><span class="pl-c1">True</span>, <span class="pl-s1">fill</span><span class="pl-c1">=</span><span class="pl-s">'both'</span>)
         
-        menu = tk.Menu(self.root)
+        <span class="pl-s1">menu</span> <span class="pl-c1">=</span> <span class="pl-s1">tk</span>.<span class="pl-v">Menu</span>(<span class="pl-s1">self</span>.<span class="pl-s1">root</span>)
         
-        file_menu = tk.Menu(menu, tearoff=0)
-        file_menu.add_command(label="新建", command=self.new_file)
-        file_menu.add_command(label="打开", command=self.open_file)
-        file_menu.add_command(label="保存", command=self.save_file)
-        file_menu.add_command(label="另存", command=self.save_as_file)
-        file_menu.add_command(label="退出", command=self.exit)
-        menu.add_cascade(label="文件", menu=file_menu)
+        <span class="pl-s1">file_menu</span> <span class="pl-c1">=</span> <span class="pl-s1">tk</span>.<span class="pl-v">Menu</span>(<span class="pl-s1">menu</span>, <span class="pl-s1">tearoff</span><span class="pl-c1">=</span><span class="pl-c1">0</span>)
+        <span class="pl-s1">file_menu</span>.<span class="pl-en">add_command</span>(<span class="pl-s1">label</span><span class="pl-c1">=</span><span class="pl-s">"新建"</span>, <span class="pl-s1">command</span><span class="pl-c1">=</span><span class="pl-s1">self</span>.<span class="pl-s1">new_file</span>)
+        <span class="pl-s1">file_menu</span>.<span class="pl-en">add_command</span>(<span class="pl-s1">label</span><span class="pl-c1">=</span><span class="pl-s">"打开"</span>, <span class="pl-s1">command</span><span class="pl-c1">=</span><span class="pl-s1">self</span>.<span class="pl-s1">open_file</span>)
+        <span class="pl-s1">file_menu</span>.<span class="pl-en">add_command</span>(<span class="pl-s1">label</span><span class="pl-c1">=</span><span class="pl-s">"保存"</span>, <span class="pl-s1">command</span><span class="pl-c1">=</span><span class="pl-s1">self</span>.<span class="pl-s1">save_file</span>)
+        <span class="pl-s1">file_menu</span>.<span class="pl-en">add_command</span>(<span class="pl-s1">label</span><span class="pl-c1">=</span><span class="pl-s">"另存"</span>, <span class="pl-s1">command</span><span class="pl-c1">=</span><span class="pl-s1">self</span>.<span class="pl-s1">save_as_file</span>)
+        <span class="pl-s1">file_menu</span>.<span class="pl-en">add_command</span>(<span class="pl-s1">label</span><span class="pl-c1">=</span><span class="pl-s">"退出"</span>, <span class="pl-s1">command</span><span class="pl-c1">=</span><span class="pl-s1">self</span>.<span class="pl-s1">exit</span>)
+        <span class="pl-s1">menu</span>.<span class="pl-en">add_cascade</span>(<span class="pl-s1">label</span><span class="pl-c1">=</span><span class="pl-s">"文件"</span>, <span class="pl-s1">menu</span><span class="pl-c1">=</span><span class="pl-s1">file_menu</span>)
         
-        edit_menu = tk.Menu(menu, tearoff=0)
-        edit_menu.add_command(label="复制", command=self.copy)
-        edit_menu.add_command(label="粘贴", command=self.paste)
-        edit_menu.add_command(label="剪切", command=self.cut)
-        edit_menu.add_command(label="替换", command=self.replace)
-        menu.add_cascade(label="编辑", menu=edit_menu)
+        <span class="pl-s1">edit_menu</span> <span class="pl-c1">=</span> <span class="pl-s1">tk</span>.<span class="pl-v">Menu</span>(<span class="pl-s1">menu</span>, <span class="pl-s1">tearoff</span><span class="pl-c1">=</span><span class="pl-c1">0</span>)
+        <span class="pl-s1">edit_menu</span>.<span class="pl-en">add_command</span>(<span class="pl-s1">label</span><span class="pl-c1">=</span><span class="pl-s">"复制"</span>, <span class="pl-s1">command</span><span class="pl-c1">=</span><span class="pl-s1">self</span>.<span class="pl-s1">copy</span>)
+        <span class="pl-s1">edit_menu</span>.<span class="pl-en">add_command</span>(<span class="pl-s1">label</span><span class="pl-c1">=</span><span class="pl-s">"粘贴"</span>, <span class="pl-s1">command</span><span class="pl-c1">=</span><span class="pl-s1">self</span>.<span class="pl-s1">paste</span>)
+        <span class="pl-s1">edit_menu</span>.<span class="pl-en">add_command</span>(<span class="pl-s1">label</span><span class="pl-c1">=</span><span class="pl-s">"剪切"</span>, <span class="pl-s1">command</span><span class="pl-c1">=</span><span class="pl-s1">self</span>.<span class="pl-s1">cut</span>)
+        <span class="pl-s1">edit_menu</span>.<span class="pl-en">add_command</span>(<span class="pl-s1">label</span><span class="pl-c1">=</span><span class="pl-s">"替换"</span>, <span class="pl-s1">command</span><span class="pl-c1">=</span><span class="pl-s1">self</span>.<span class="pl-s1">replace</span>)
+        <span class="pl-s1">menu</span>.<span class="pl-en">add_cascade</span>(<span class="pl-s1">label</span><span class="pl-c1">=</span><span class="pl-s">"编辑"</span>, <span class="pl-s1">menu</span><span class="pl-c1">=</span><span class="pl-s1">edit_menu</span>)
         
-        format_menu = tk.Menu(menu, tearoff=0)
-        format_menu.add_command(label="设置字号", command=self.set_font_size)
-        format_menu.add_command(label="设置背景", command=self.set_bg_color)
-        format_menu.add_command(label="设置字色", command=self.set_fg_color)
-        menu.add_cascade(label="格式", menu=format_menu)
+        <span class="pl-s1">format_menu</span> <span class="pl-c1">=</span> <span class="pl-s1">tk</span>.<span class="pl-v">Menu</span>(<span class="pl-s1">menu</span>, <span class="pl-s1">tearoff</span><span class="pl-c1">=</span><span class="pl-c1">0</span>)
+        <span class="pl-s1">format_menu</span>.<span class="pl-en">add_command</span>(<span class="pl-s1">label</span><span class="pl-c1">=</span><span class="pl-s">"设置字号"</span>, <span class="pl-s1">command</span><span class="pl-c1">=</span><span class="pl-s1">self</span>.<span class="pl-s1">set_font_size</span>)
+        <span class="pl-s1">format_menu</span>.<span class="pl-en">add_command</span>(<span class="pl-s1">label</span><span class="pl-c1">=</span><span class="pl-s">"设置背景"</span>, <span class="pl-s1">command</span><span class="pl-c1">=</span><span class="pl-s1">self</span>.<span class="pl-s1">set_bg_color</span>)
+        <span class="pl-s1">format_menu</span>.<span class="pl-en">add_command</span>(<span class="pl-s1">label</span><span class="pl-c1">=</span><span class="pl-s">"设置字色"</span>, <span class="pl-s1">command</span><span class="pl-c1">=</span><span class="pl-s1">self</span>.<span class="pl-s1">set_fg_color</span>)
+        <span class="pl-s1">menu</span>.<span class="pl-en">add_cascade</span>(<span class="pl-s1">label</span><span class="pl-c1">=</span><span class="pl-s">"格式"</span>, <span class="pl-s1">menu</span><span class="pl-c1">=</span><span class="pl-s1">format_menu</span>)
         
-        self.root.config(menu=menu)
+        <span class="pl-s1">self</span>.<span class="pl-s1">root</span>.<span class="pl-en">config</span>(<span class="pl-s1">menu</span><span class="pl-c1">=</span><span class="pl-s1">menu</span>)
         
-    def new_file(self):
-        self.text.delete('1.0', tk.END)
+    <span class="pl-k">def</span> <span class="pl-en">new_file</span>(<span class="pl-s1">self</span>):
+        <span class="pl-s1">self</span>.<span class="pl-s1">text</span>.<span class="pl-en">delete</span>(<span class="pl-s">'1.0'</span>, <span class="pl-s1">tk</span>.<span class="pl-v">END</span>)
         
-    def open_file(self):
-        file = filedialog.askopenfile(mode='r')
-        if file is not None:
-            self.text.delete('1.0', tk.END)
-            self.text.insert(tk.INSERT, file.read())
-            file.close()
+    <span class="pl-k">def</span> <span class="pl-en">open_file</span>(<span class="pl-s1">self</span>):
+        <span class="pl-s1">file</span> <span class="pl-c1">=</span> <span class="pl-s1">filedialog</span>.<span class="pl-en">askopenfile</span>(<span class="pl-s1">mode</span><span class="pl-c1">=</span><span class="pl-s">'r'</span>)
+        <span class="pl-k">if</span> <span class="pl-s1">file</span> <span class="pl-c1">is</span> <span class="pl-c1">not</span> <span class="pl-c1">None</span>:
+            <span class="pl-s1">self</span>.<span class="pl-s1">text</span>.<span class="pl-en">delete</span>(<span class="pl-s">'1.0'</span>, <span class="pl-s1">tk</span>.<span class="pl-v">END</span>)
+            <span class="pl-s1">self</span>.<span class="pl-s1">text</span>.<span class="pl-en">insert</span>(<span class="pl-s1">tk</span>.<span class="pl-v">INSERT</span>, <span class="pl-s1">file</span>.<span class="pl-en">read</span>())
+            <span class="pl-s1">file</span>.<span class="pl-en">close</span>()
             
-    def save_file(self):
-        file = filedialog.asksaveasfile(mode='w')
-        if file is not None:
-            file.write(self.text.get('1.0', tk.END))
-            file.close()
+    <span class="pl-k">def</span> <span class="pl-en">save_file</span>(<span class="pl-s1">self</span>):
+        <span class="pl-s1">file</span> <span class="pl-c1">=</span> <span class="pl-s1">filedialog</span>.<span class="pl-en">asksaveasfile</span>(<span class="pl-s1">mode</span><span class="pl-c1">=</span><span class="pl-s">'w'</span>)
+        <span class="pl-k">if</span> <span class="pl-s1">file</span> <span class="pl-c1">is</span> <span class="pl-c1">not</span> <span class="pl-c1">None</span>:
+            <span class="pl-s1">file</span>.<span class="pl-en">write</span>(<span class="pl-s1">self</span>.<span class="pl-s1">text</span>.<span class="pl-en">get</span>(<span class="pl-s">'1.0'</span>, <span class="pl-s1">tk</span>.<span class="pl-v">END</span>))
+            <span class="pl-s1">file</span>.<span class="pl-en">close</span>()
             
-    def save_as_file(self):
-        file = filedialog.asksaveasfile(mode='w')
-        if file is not None:
-            file.write(self.text.get('1.0', tk.END))
-            file.close()
+    <span class="pl-k">def</span> <span class="pl-en">save_as_file</span>(<span class="pl-s1">self</span>):
+        <span class="pl-s1">file</span> <span class="pl-c1">=</span> <span class="pl-s1">filedialog</span>.<span class="pl-en">asksaveasfile</span>(<span class="pl-s1">mode</span><span class="pl-c1">=</span><span class="pl-s">'w'</span>)
+        <span class="pl-k">if</span> <span class="pl-s1">file</span> <span class="pl-c1">is</span> <span class="pl-c1">not</span> <span class="pl-c1">None</span>:
+            <span class="pl-s1">file</span>.<span class="pl-en">write</span>(<span class="pl-s1">self</span>.<span class="pl-s1">text</span>.<span class="pl-en">get</span>(<span class="pl-s">'1.0'</span>, <span class="pl-s1">tk</span>.<span class="pl-v">END</span>))
+            <span class="pl-s1">file</span>.<span class="pl-en">close</span>()
             
-    def exit(self):
-        self.root.destroy()
+    <span class="pl-k">def</span> <span class="pl-en">exit</span>(<span class="pl-s1">self</span>):
+        <span class="pl-s1">self</span>.<span class="pl-s1">root</span>.<span class="pl-en">destroy</span>()
         
-    def copy(self):
-        self.text.clipboard_clear()
-        self.text.clipboard_append(self.text.selection_get())
+    <span class="pl-k">def</span> <span class="pl-en">copy</span>(<span class="pl-s1">self</span>):
+        <span class="pl-s1">self</span>.<span class="pl-s1">text</span>.<span class="pl-en">clipboard_clear</span>()
+        <span class="pl-s1">self</span>.<span class="pl-s1">text</span>.<span class="pl-en">clipboard_append</span>(<span class="pl-s1">self</span>.<span class="pl-s1">text</span>.<span class="pl-en">selection_get</span>())
         
-    def paste(self):
-        self.text.insert(tk.INSERT, self.text.clipboard_get())
+    <span class="pl-k">def</span> <span class="pl-en">paste</span>(<span class="pl-s1">self</span>):
+        <span class="pl-s1">self</span>.<span class="pl-s1">text</span>.<span class="pl-en">insert</span>(<span class="pl-s1">tk</span>.<span class="pl-v">INSERT</span>, <span class="pl-s1">self</span>.<span class="pl-s1">text</span>.<span class="pl-en">clipboard_get</span>())
         
-    def cut(self):
-        self.copy()
-        self.text.delete(tk.SEL_FIRST, tk.SEL_LAST)
+    <span class="pl-k">def</span> <span class="pl-en">cut</span>(<span class="pl-s1">self</span>):
+        <span class="pl-s1">self</span>.<span class="pl-en">copy</span>()
+        <span class="pl-s1">self</span>.<span class="pl-s1">text</span>.<span class="pl-en">delete</span>(<span class="pl-s1">tk</span>.<span class="pl-v">SEL_FIRST</span>, <span class="pl-s1">tk</span>.<span class="pl-v">SEL_LAST</span>)
         
-    def replace(self):
-        target = simpledialog.askstring("替换", "输入要替换的文本：")
-        if target:
-            replace_text = simpledialog.askstring("替换", "输入替换后的文本：")
-            if replace_text:
-                start = self.text.search(target, tk.INSERT, stopindex=tk.END)
-                if start:
-                    end = f"{start}+{len(target)}c"
-                    self.text.delete(start, end)
-                    self.text.insert(start, replace_text)
+    <span class="pl-k">def</span> <span class="pl-en">replace</span>(<span class="pl-s1">self</span>):
+        <span class="pl-s1">target</span> <span class="pl-c1">=</span> <span class="pl-s1">simpledialog</span>.<span class="pl-en">askstring</span>(<span class="pl-s">"替换"</span>, <span class="pl-s">"输入要替换的文本："</span>)
+        <span class="pl-k">if</span> <span class="pl-s1">target</span>:
+            <span class="pl-s1">replace_text</span> <span class="pl-c1">=</span> <span class="pl-s1">simpledialog</span>.<span class="pl-en">askstring</span>(<span class="pl-s">"替换"</span>, <span class="pl-s">"输入替换后的文本："</span>)
+            <span class="pl-k">if</span> <span class="pl-s1">replace_text</span>:
+                <span class="pl-s1">start</span> <span class="pl-c1">=</span> <span class="pl-s1">self</span>.<span class="pl-s1">text</span>.<span class="pl-en">search</span>(<span class="pl-s1">target</span>, <span class="pl-s1">tk</span>.<span class="pl-v">INSERT</span>, <span class="pl-s1">stopindex</span><span class="pl-c1">=</span><span class="pl-s1">tk</span>.<span class="pl-v">END</span>)
+                <span class="pl-k">if</span> <span class="pl-s1">start</span>:
+                    <span class="pl-s1">end</span> <span class="pl-c1">=</span> <span class="pl-s">f"<span class="pl-s1"><span class="pl-kos">{</span><span class="pl-s1">start</span><span class="pl-kos">}</span></span>+<span class="pl-s1"><span class="pl-kos">{</span><span class="pl-en">len</span>(<span class="pl-s1">target</span>)<span class="pl-kos">}</span></span>c"</span>
+                    <span class="pl-s1">self</span>.<span class="pl-s1">text</span>.<span class="pl-en">delete</span>(<span class="pl-s1">start</span>, <span class="pl-s1">end</span>)
+                    <span class="pl-s1">self</span>.<span class="pl-s1">text</span>.<span class="pl-en">insert</span>(<span class="pl-s1">start</span>, <span class="pl-s1">replace_text</span>)
         
-    def set_font(self):
-        font = simpledialog.askstring("设置字体", "输入字体名称：")
-        if font:
-            self.text.config(font=(font, self.text['font'].split()[1]))
+    <span class="pl-k">def</span> <span class="pl-en">set_font</span>(<span class="pl-s1">self</span>):
+        <span class="pl-s1">font</span> <span class="pl-c1">=</span> <span class="pl-s1">simpledialog</span>.<span class="pl-en">askstring</span>(<span class="pl-s">"设置字体"</span>, <span class="pl-s">"输入字体名称："</span>)
+        <span class="pl-k">if</span> <span class="pl-s1">font</span>:
+            <span class="pl-s1">self</span>.<span class="pl-s1">text</span>.<span class="pl-en">config</span>(<span class="pl-s1">font</span><span class="pl-c1">=</span>(<span class="pl-s1">font</span>, <span class="pl-s1">self</span>.<span class="pl-s1">text</span>[<span class="pl-s">'font'</span>].<span class="pl-en">split</span>()[<span class="pl-c1">1</span>]))
             
-    def set_font_size(self):
-        size = simpledialog.askinteger("设置字号", "输入字号：")
-        if size:
-            self.text.config(font=(self.text['font'].split()[0], size))
+    <span class="pl-k">def</span> <span class="pl-en">set_font_size</span>(<span class="pl-s1">self</span>):
+        <span class="pl-s1">size</span> <span class="pl-c1">=</span> <span class="pl-s1">simpledialog</span>.<span class="pl-en">askinteger</span>(<span class="pl-s">"设置字号"</span>, <span class="pl-s">"输入字号："</span>)
+        <span class="pl-k">if</span> <span class="pl-s1">size</span>:
+            <span class="pl-s1">self</span>.<span class="pl-s1">text</span>.<span class="pl-en">config</span>(<span class="pl-s1">font</span><span class="pl-c1">=</span>(<span class="pl-s1">self</span>.<span class="pl-s1">text</span>[<span class="pl-s">'font'</span>].<span class="pl-en">split</span>()[<span class="pl-c1">0</span>], <span class="pl-s1">size</span>))
             
-    def set_bg_color(self):
-        color = colorchooser.askcolor(title="设置背景")
-        if color[1]:
-            self.text.config(bg=color[1])
+    <span class="pl-k">def</span> <span class="pl-en">set_bg_color</span>(<span class="pl-s1">self</span>):
+        <span class="pl-s1">color</span> <span class="pl-c1">=</span> <span class="pl-s1">colorchooser</span>.<span class="pl-en">askcolor</span>(<span class="pl-s1">title</span><span class="pl-c1">=</span><span class="pl-s">"设置背景"</span>)
+        <span class="pl-k">if</span> <span class="pl-s1">color</span>[<span class="pl-c1">1</span>]:
+            <span class="pl-s1">self</span>.<span class="pl-s1">text</span>.<span class="pl-en">config</span>(<span class="pl-s1">bg</span><span class="pl-c1">=</span><span class="pl-s1">color</span>[<span class="pl-c1">1</span>])
         
-    def set_fg_color(self):
-        color = colorchooser.askcolor(title="设置字色")
-        if color[1]:
-            self.text.config(fg=color[1])
-if __name__ == "__main__":
-    root = tk.Tk()
-    app = Notepad(root)
-    root.mainloop()
-</code></pre>
+    <span class="pl-k">def</span> <span class="pl-en">set_fg_color</span>(<span class="pl-s1">self</span>):
+        <span class="pl-s1">color</span> <span class="pl-c1">=</span> <span class="pl-s1">colorchooser</span>.<span class="pl-en">askcolor</span>(<span class="pl-s1">title</span><span class="pl-c1">=</span><span class="pl-s">"设置字色"</span>)
+        <span class="pl-k">if</span> <span class="pl-s1">color</span>[<span class="pl-c1">1</span>]:
+            <span class="pl-s1">self</span>.<span class="pl-s1">text</span>.<span class="pl-en">config</span>(<span class="pl-s1">fg</span><span class="pl-c1">=</span><span class="pl-s1">color</span>[<span class="pl-c1">1</span>])
+<span class="pl-k">if</span> <span class="pl-s1">__name__</span> <span class="pl-c1">==</span> <span class="pl-s">"__main__"</span>:
+    <span class="pl-s1">root</span> <span class="pl-c1">=</span> <span class="pl-s1">tk</span>.<span class="pl-v">Tk</span>()
+    <span class="pl-s1">app</span> <span class="pl-c1">=</span> <span class="pl-v">Notepad</span>(<span class="pl-s1">root</span>)
+    <span class="pl-s1">root</span>.<span class="pl-en">mainloop</span>()</pre></div>
 <p>代码大小4KB</p>
 <blockquote>
 <p>精简版<br>
 同样用Python的IDLE新建</p>
 </blockquote>
 <p>代码如下：</p>
-<pre class="notranslate"><code class="notranslate">import tkinter as tk
-from tkinter import filedialog
-def save_file():
-    file_path = filedialog.asksaveasfilename()
-    if file_path:
-        with open(file_path, 'w') as file:
-            file.write(text_editor.get('1.0', tk.END))
-root = tk.Tk()
-root.title()
-menu_bar = tk.Menu(root)
-root.config(menu=menu_bar)
-file_menu = tk.Menu(menu_bar, tearoff=0)
-menu_bar.add_cascade(label="保存", command=save_file)
-text_editor = tk.Text(root)
-text_editor.pack(expand=1, fill=tk.BOTH)
-root.mainloop()
-</code></pre>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">tkinter</span> <span class="pl-k">as</span> <span class="pl-s1">tk</span>
+<span class="pl-k">from</span> <span class="pl-s1">tkinter</span> <span class="pl-k">import</span> <span class="pl-s1">filedialog</span>
+<span class="pl-k">def</span> <span class="pl-en">save_file</span>():
+    <span class="pl-s1">file_path</span> <span class="pl-c1">=</span> <span class="pl-s1">filedialog</span>.<span class="pl-en">asksaveasfilename</span>()
+    <span class="pl-k">if</span> <span class="pl-s1">file_path</span>:
+        <span class="pl-k">with</span> <span class="pl-en">open</span>(<span class="pl-s1">file_path</span>, <span class="pl-s">'w'</span>) <span class="pl-k">as</span> <span class="pl-s1">file</span>:
+            <span class="pl-s1">file</span>.<span class="pl-en">write</span>(<span class="pl-s1">text_editor</span>.<span class="pl-en">get</span>(<span class="pl-s">'1.0'</span>, <span class="pl-s1">tk</span>.<span class="pl-v">END</span>))
+<span class="pl-s1">root</span> <span class="pl-c1">=</span> <span class="pl-s1">tk</span>.<span class="pl-v">Tk</span>()
+<span class="pl-s1">root</span>.<span class="pl-en">title</span>()
+<span class="pl-s1">menu_bar</span> <span class="pl-c1">=</span> <span class="pl-s1">tk</span>.<span class="pl-v">Menu</span>(<span class="pl-s1">root</span>)
+<span class="pl-s1">root</span>.<span class="pl-en">config</span>(<span class="pl-s1">menu</span><span class="pl-c1">=</span><span class="pl-s1">menu_bar</span>)
+<span class="pl-s1">file_menu</span> <span class="pl-c1">=</span> <span class="pl-s1">tk</span>.<span class="pl-v">Menu</span>(<span class="pl-s1">menu_bar</span>, <span class="pl-s1">tearoff</span><span class="pl-c1">=</span><span class="pl-c1">0</span>)
+<span class="pl-s1">menu_bar</span>.<span class="pl-en">add_cascade</span>(<span class="pl-s1">label</span><span class="pl-c1">=</span><span class="pl-s">"保存"</span>, <span class="pl-s1">command</span><span class="pl-c1">=</span><span class="pl-s1">save_file</span>)
+<span class="pl-s1">text_editor</span> <span class="pl-c1">=</span> <span class="pl-s1">tk</span>.<span class="pl-v">Text</span>(<span class="pl-s1">root</span>)
+<span class="pl-s1">text_editor</span>.<span class="pl-en">pack</span>(<span class="pl-s1">expand</span><span class="pl-c1">=</span><span class="pl-c1">1</span>, <span class="pl-s1">fill</span><span class="pl-c1">=</span><span class="pl-s1">tk</span>.<span class="pl-v">BOTH</span>)
+<span class="pl-s1">root</span>.<span class="pl-en">mainloop</span>()</pre></div>
 <p>代码大小510字节！</p>
 <blockquote>
 <p>大小释义<br>
 1KB=1024字节，510字节≈0.5KB！</p>
+</blockquote>
+<blockquote>
+<p>2024.7.22更新<br>
+增加彩色代码高亮显示</p>
 </blockquote>
 <p>OVER</p></div>
 <div style="font-size:small;margin-top:8px;float:right;">转载请注明出处</div>

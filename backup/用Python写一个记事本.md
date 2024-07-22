@@ -8,7 +8,7 @@
 >结尾有一个精简版，可以看一看
 
 代码如下：
-```
+```python
 import tkinter as tk
 from tkinter import filedialog, messagebox, simpledialog, colorchooser
 class Notepad:
@@ -121,7 +121,7 @@ if __name__ == "__main__":
 >同样用Python的IDLE新建
 
 代码如下：
-```
+```python
 import tkinter as tk
 from tkinter import filedialog
 def save_file():
@@ -143,5 +143,8 @@ root.mainloop()
 
 >大小释义
 >1KB=1024字节，510字节≈0.5KB！
+
+>2024.7.22更新
+>增加彩色代码高亮显示
 
 OVER
