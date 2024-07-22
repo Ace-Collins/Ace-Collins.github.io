@@ -3,7 +3,7 @@
     "subTitle":"宏彦HY",
     "avatarUrl":"https://avatars.githubusercontent.com/u/155808868?v=4",
     "displayTitle":"Ace Collins",
-    "homeUrl":"https://acecollins.my.canvasite.cn/aab",
+    "homeUrl":"https://ace-collins.github.io/",
     "faviconUrl":"https://github.githubassets.com/favicons/favicon.svg",
     "email":"yanwindow@outlook.com",
     "startSite":"07/18/2024",
@@ -31,5 +31,6 @@
     "ogImage":"https://cdn.jsdelivr.net/gh/Meekdai/meekdai.github.io/logo64.jpg",
     "primerCSS":"<link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />",
     "needComment":0,
+    "allHead":"<script src='https://blog.meekdai.com/assets/GmeekBSZ.js'></script>",
     "GMEEK_VERSION":"last"
 }
