@@ -33,5 +33,6 @@
     "needComment":0,
     "allHead":"<script src='https://blog.meekdai.com/assets/GmeekBSZ.js'></script>",
     "singlePage":["link","about"],
+    "script":"<script src='https://blog.meekdai.com/Gmeek/plugins/lightbox.js'></script>",
     "GMEEK_VERSION":"last"
 }
